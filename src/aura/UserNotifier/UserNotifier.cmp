@@ -1,0 +1,18 @@
+<!--
+  @Component Name     : UserNotifier.cmp
+  @Description        : A Worker Component used to show a toast notification to users
+  @Author             : MostafaMatar
+  @Group              : 
+  @Last Modified By   : MostafaMatar
+  @Last Modified On   : 5/24/2019, 6:09:07 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    5/24/2019, 6:01:17 PM   MostafaMatar     Initial Version
+-->
+<aura:component>
+    <aura:method name="notifyUser" action="{!c.notifyUser}"> 
+        <aura:attribute name="notification" type="Object" /> 
+    </aura:method>
+</aura:component>	
