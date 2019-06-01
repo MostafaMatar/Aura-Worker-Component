@@ -1,8 +1,5 @@
 <!DOCTYPE html>
 <html>
-	<head>
-		<style>pre{padding:10px;background-color:black;color: yellow;}</style>
-	</head>
 	<body>
 		<h2>Aura Worker Components</h2>
 		<p>Aura Worker Components is a collection of aura service components each performing a specific function which you can use from the controller of your own aura components by invoking them from the Javascript controller.</p>
