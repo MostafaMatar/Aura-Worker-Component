@@ -1,0 +1,26 @@
+<!--
+  @Component Name     : UserNotifierSample.cmp
+  @Description        : 
+  @Author             : MostafaMatar
+  @Group              : 
+  @Last Modified By   : MostafaMatar
+  @Last Modified On   : 6/1/2019, 12:12:20 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/1/2019, 12:12:20 PM   MostafaMatar     Initial Version
+-->
+<aura:component implements="force:appHostable">
+    <lightning:buttonGroup>
+        <!-- Info Message button -->
+    	<lightning:button variant="brand" label="info" onclick="{! c.handleClick }" />
+
+    	<!-- Error Message button  -->
+    	<lightning:button variant="destructive" label="error" onclick="{! c.handleClick }"/>
+
+    	<!-- Success Message button -->
+    	<lightning:button variant="success" label="success" onclick="{! c.handleClick }"/>
+    </lightning:buttonGroup>
+    <c:UserNotifier aura:id="notifier" />
+</aura:component>

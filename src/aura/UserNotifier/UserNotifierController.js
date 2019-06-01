@@ -1,6 +1,6 @@
 ({
     notifyUser : function(component, event, helper) {
-        var notification = component.get("notification");
+        var notification = event.getParam('arguments').notification;
         var toastEvent = $A.get("e.force:showToast");
         if(notification){
             if(toastEvent){
