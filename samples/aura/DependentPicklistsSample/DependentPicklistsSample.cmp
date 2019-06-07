@@ -1,0 +1,25 @@
+<!--
+  @Component Name     : DependentPicklistsSample.cmp
+  @Description        : A sample showing how to use the DependentPicklists component
+  @Author             : MostafaMatar
+  @Group              : 
+  @Last Modified By   : MostafaMatar
+  @Last Modified On   : 6/7/2019, 7:28:05 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/7/2019, 7:27:01 PM   MostafaMatar     Initial Version
+-->
+<aura:component>
+    <aura:attribute name="country" type="String" />
+    <aura:attribute name="city" type="String" />
+    <aura:handler name="init" value="{!this}" action="{!c.init}" />
+    <p><lightning:formattedText value="{!'Selected Country is ' + v.country}" /></p>
+    <p><lightning:formattedText value="{!'Selected City is ' + v.city}" /></p>
+        
+    <c:DependentPicklists aura:id="picklists" 
+                          masterPicklistLabel="Country" slavePicklistLabel="City"
+                          masterPicklistValue="{!v.country}" slavePicklistValue="{!v.city}"
+                          />
+</aura:component>

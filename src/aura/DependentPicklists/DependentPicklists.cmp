@@ -1,0 +1,43 @@
+<!--
+  @Component Name     : DependentPicklists.cmp
+  @Description        : A worker component used to display and manage 2 dependent picklists
+  @Author             : MostafaMatar
+  @Group              : 
+  @Last Modified By   : MostafaMatar
+  @Last Modified On   : 6/7/2019, 6:05:40 PM
+  @Modification Log   : 
+  ==============================================================================
+  Ver         Date                     Author      		      Modification
+  ==============================================================================
+  1.0    6/7/2019, 5:16:58 PM   MostafaMatar     Initial Version
+-->
+<aura:component>
+    <!-- Private attributes -->
+    <aura:attribute name="opts" type="Object" access="PRIVATE" />
+    <aura:attribute name="masterPicklistOptions" type="String" access="PRIVATE" />
+    <aura:attribute name="slavePicklistOptions" type="String" access="PRIVATE" />
+    <!-- Public attributes -->
+    <aura:attribute name="masterPicklistLabel" type="String" />
+    <aura:attribute name="slavePicklistLabel" type="String" />
+    <aura:attribute name="masterPicklistValue" type="String" />
+    <aura:attribute name="slavePicklistValue" type="String" />
+
+    <aura:method name="displayLists" action="{!c.displayLists}"> 
+        <aura:attribute name="optionsMap" type="Object" /> 
+    </aura:method>
+
+    <!-- User Interface -->
+    <lightning:select onchange="{!c.masterValueChanged}" name="master" label="{!v.masterPicklistLabel}" aura:id="master" value="{!v.masterPicklistValue}">
+        <option text="--None--" value="" />
+        <aura:iteration items="{!v.masterPicklistOptions}" var="mo">
+            <option text="{!mo}" value="{!mo}" />
+        </aura:iteration>
+    </lightning:select>
+    
+    <lightning:select disabled="{!v.masterPicklistValue == ''}" name="slave" label="{!v.slavePicklistLabel}" aura:id="slave" value="{!v.slavePicklistValue}">
+        <option text="--None--" value="" />
+        <aura:iteration items="{!v.slavePicklistOptions}" var="so">
+            <option text="{!so}" value="{!so}" />
+        </aura:iteration>
+    </lightning:select>
+</aura:component>
