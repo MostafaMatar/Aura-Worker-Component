@@ -7,7 +7,7 @@
 		<h3>UserNotifier Component</h3>
 		<p>A UI component that can show a notification via a toast message or a Javascript alert if the force:showToast event isn't supported to users.</p>
 		<h3>DependentPicklists Component</h3>
-		<p>A UI component that can show enables you to show 2 picklists with the value of the second picklist dependent on the first one. The valuesof theselistsare supplied dynamically in a Javascript Map object.</p>		
+		<p>A UI component that can show enables you to show 2 picklists with the value of the second picklist dependent on the first one. The values of these lists are supplied dynamically in a Javascript Map object.</p>		
 		<p>Contributions are welcome according to licence terms and conditions</p>
 	</body>
 </html>
